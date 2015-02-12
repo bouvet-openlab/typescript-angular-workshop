@@ -71,3 +71,14 @@ gulp.task('full', function() {
     compileTypeScript();
 
 });
+
+gulp.task('watch', ['default'], function(){
+
+    // Will watch all TypeScript files for changes (triggers on file save).
+    // Runs the 'default' gulp target when changes occur (compiles TypeScript)
+
+    // Run with: "gulp watch"
+
+    gulp.watch('Source/LibraryApp/App/**/*.ts', ['default']);
+
+});
