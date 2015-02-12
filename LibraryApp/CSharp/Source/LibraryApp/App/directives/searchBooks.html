@@ -1,0 +1,28 @@
+﻿<div>
+    <div class="col-lg-12">
+        <form class="form-inline">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search book title or author" ng-model="searchQuery" />    
+                <button type="button" class="btn btn-primary" ng-click="search()">Search</button>
+            </div>
+        </form>
+        <div ng-if="anyBooks">
+            <table class="table table-striped">
+                <thead>
+                    <th>Title</th>
+                    <th>Author</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="book in books">
+                        <td>{{book.title}}</td>
+                        <td>{{book.author}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-danger" ng-click="clear()">Clear</button>
+        </div>
+        <div ng-if="!anyBooks && noResult">
+            <h4>No books found for "{{searchQuery}}"</h4>
+        </div>
+    </div>
+</div>

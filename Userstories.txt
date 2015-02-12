@@ -1,0 +1,34 @@
+Application description:
+	This application is a tool for managing a library (the ones with books).
+	The application has two sides. One is public, where library guests/customers can search for books and see where the book is located. The other side is for librarians/employees to do administrative tasks.
+	The tasks of the application is mainly:
+		- To keep a registry of all books in the library at any given time.
+		- To search for books and their location in the library.
+		- To give information about who is renting a book and for how long.
+		- To handle the checkout process of renting a book
+		- To handle the checkin process of receiving a rented book.
+
+Userstories
+	1. As a public customer of the library, I want to search for a book title or author and see if this book is available in the library at all. If it is, I want to see where it is located.
+
+	2. As a librarian, I want to see who is renting a given book and for how long.
+		- If the rent is overdue, the application should display overdue rent in days.
+
+	3. As a librarian, I want to register a book for checkout by a customer.
+		The following information about a customer should be tracked:
+			- Name (fields: first + last)
+			- Home address (fields: zip, street, address)
+			- Phone: (field: phone)
+			- Email: (field: email)
+		The following information about a book should be tracked:
+			- The book ID
+			- Duration (in days). 30 days by default, but can be customized.
+
+	4. As a librarian I want to register a book for checkin by a customer.
+
+	https://github.com/borisyankov/DefinitelyTyped
+
+	https://github.com/borisyankov/DefinitelyTyped/issues/3532
+	The settings to turn this on or off are under Tools > Options > Web Essentials > TypeScript > Linter
+
+	http://stackoverflow.com/questions/28002810/typescript-1-4-wrong-syntax-highlighting-in-visual-studio
