@@ -10,6 +10,7 @@ Requirements
 - Requires that gulp is installed globally on the computer. You can test this by typing gulp int a commandline.
 	Install gulp by doing command: npm install --global gulp
 
+- Requies that Maven is installed on the computer and available on PATH. If you don't have Maven, you need to install it from http://maven.apache.org/ and follow their instructions
 
 To run the solution-specific gulp target
 ------------------------------------------------
@@ -20,11 +21,15 @@ To run the solution-specific gulp target
 
 3. Do command: gulp
 	This will run the "default" gulp build target (which is the only one configured)
-	Expected output on success:
-		"Using gulpfile (...)\booster-typescript-angularjs\LibraryApp\CSharp\gulpfile.js"
-		"Starting 'default'..."
-		"Finished 'default' after <ms>"
 
-		By browsing \Source\LibraryApp\App\ and subfolders, there should now be a .js and .js.map file for each .ts file.
+4. Do command: gulp watch
+	This will start watching for typescript file changes and compile to javascript automatically
 
-4. Done!
+5. Done!
+
+
+To run the java project
+------------------------------------------------
+1. In the /libraryapp folder where the pom.xml file is located, open console
+
+2. Do command: mvn clean install tomcat:run
