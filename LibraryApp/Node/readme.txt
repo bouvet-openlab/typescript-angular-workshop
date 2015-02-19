@@ -10,6 +10,8 @@ Requirements
 - Requires that gulp is installed globally on the computer. You can test this by typing gulp int a commandline.
 	Install gulp by doing command: npm install --global gulp
 
+- Requires that http-server is installed globally on the computer.
+	Install http-server by doing command: npm install --global http-server
 
 To run the solution-specific gulp target
 ------------------------------------------------
@@ -24,7 +26,7 @@ To run the solution-specific gulp target
 
 4. Do command: http-server src
 	This will start a http server in the src directory. The website should be running at http://localhost:8080
-
+	
 In a separate console window:
 
 5. Do command: gulp watch
