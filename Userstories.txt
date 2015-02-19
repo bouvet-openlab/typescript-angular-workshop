@@ -1,4 +1,5 @@
-Application description:
+Application description
+
 	This application is a tool for managing a library (the ones with books).
 	The application has two sides. One is public, where library guests/customers can search for books and see where the book is located. The other side is for librarians/employees to do administrative tasks.
 	The tasks of the application is mainly:
@@ -8,13 +9,30 @@ Application description:
 		- To handle the checkout process of renting a book
 		- To handle the checkin process of receiving a rented book.
 
+Features
+
+	1. Implemented: Anyone (public/admin) can search for books.
+	2. Anyone (public/admin) can search for where in the library a book is located.
+	3. Admin can see overdue rentals
+	4. Admin can rent a book for a customer
+	5. Admin can deposit a book for a customer
+
+	Extra/bonus
+
+	6. Admin can enter a new book into the library
+	7. Admin can delete a book from the library
+	8. Admin can update properties on a existing book
+
 Userstories
+
 	1. As a public customer of the library, I want to search for a book title or author and see if this book is available in the library at all. If it is, I want to see where it is located.
 
 	2. As a librarian, I want to see who is renting a given book and for how long.
 		- If the rent is overdue, the application should display overdue rent in days.
 
-	3. As a librarian, I want to register a book for checkout by a customer.
+	3. As a librarian, I want to see overdue rentals on the administrator front page.
+
+	4. As a librarian, I want to register a book for checkout by a customer.
 		The following information about a customer should be tracked:
 			- Name (fields: first + last)
 			- Home address (fields: zip, street, address)
@@ -24,11 +42,12 @@ Userstories
 			- The book ID
 			- Duration (in days). 30 days by default, but can be customized.
 
-	4. As a librarian I want to register a book for checkin by a customer.
+	5. As a librarian I want to register a book for checkin by a customer.
 
-	https://github.com/borisyankov/DefinitelyTyped
+	Extra/bonus:
 
-	https://github.com/borisyankov/DefinitelyTyped/issues/3532
-	The settings to turn this on or off are under Tools > Options > Web Essentials > TypeScript > Linter
+	6. As a librarian I want to enter a new book into the library.
 
-	http://stackoverflow.com/questions/28002810/typescript-1-4-wrong-syntax-highlighting-in-visual-studio
+	7. As a librarian I want to delete a book from the library.
+
+	8. As a librarian I want to update properties on a book.
