@@ -25,4 +25,9 @@ To run the solution-specific gulp target
 4. Do command: http-server src
 	This will start a http server in the src directory. The website should be running at http://localhost:8080
 
-5. Done!
+In a separate console window:
+
+5. Do command: gulp watch
+	This will start watching for typescript file changes and compile to javascript automatically
+
+6. Done!
