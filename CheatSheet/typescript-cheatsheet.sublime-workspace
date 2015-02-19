@@ -1,0 +1,586 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"My",
+				"MyApp"
+			],
+			[
+				"my",
+				"myEngine"
+			],
+			[
+				"comp",
+				"compileTypeScript"
+			],
+			[
+				"res",
+				"restoreNuGetPackages"
+			],
+			[
+				"eng",
+				"engine"
+			],
+			[
+				"creat",
+				"createTextNode"
+			],
+			[
+				"tot",
+				"totalHeight"
+			],
+			[
+				"remo",
+				"removeSquare"
+			],
+			[
+				"la",
+				"layerY"
+			],
+			[
+				"lay",
+				"layerX"
+			],
+			[
+				"l",
+				"lastClickCoords"
+			],
+			[
+				"in",
+				"initialPositionOffset"
+			],
+			[
+				"laye",
+				"layerY"
+			],
+			[
+				"is",
+				"isClicked"
+			],
+			[
+				"to",
+				"totalHeight"
+			],
+			[
+				"s",
+				"squares"
+			],
+			[
+				"ve",
+				"velocityX"
+			],
+			[
+				"vel",
+				"velocityX"
+			],
+			[
+				"pr",
+				"printToConsole"
+			],
+			[
+				"v",
+				"velocityY"
+			],
+			[
+				"total",
+				"totalHeight"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/01-types.ts",
+			"settings":
+			{
+				"buffer_size": 4622,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/01-types.js.map",
+			"settings":
+			{
+				"buffer_size": 4348,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 1248,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/User/Node.sublime-build",
+	"command_palette":
+	{
+		"height": 58.0,
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"typesc",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"j",
+				"Javascript Beautify"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"HTMLBeautify"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
+			[
+				"beat",
+				"Javascript Beautify"
+			],
+			[
+				"javasc",
+				"Javascript Beautify"
+			],
+			[
+				"markdown",
+				"Strapdown.js Markdown: Preview in a browser"
+			],
+			[
+				"markdo",
+				"Strapdown.js Markdown: Preview in Sublime Text"
+			],
+			[
+				"mark",
+				"Markdown HTML Preview"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"type",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"beau",
+				"Javascript Beautify"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 215.0,
+		"history":
+		[
+			"ls",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Dev/Misc/booster-typescript-angularjs/CheatSheet",
+		"/C/Dev/Misc/booster-typescript-angularjs/CheatSheet/src"
+	],
+	"file_history":
+	[
+		"/C/Users/eirik/AppData/Roaming/Sublime Text 3/Packages/User/Node.sublime-build",
+		"/C/Dev/Misc/booster-typescript-angularjs/CheatSheet/package.json",
+		"/C/Dev/Misc/booster-typescript-angularjs/LibraryApp/CSharp/gulpfile.js",
+		"/C/Users/eirik/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-build",
+		"/C/Dev/Misc/booster-typescript-angularjs/notes.txt",
+		"/C/Dev/Misc/booster-typescript-angularjs/Userstories.txt",
+		"/C/Users/eirik/AppData/Local/Microsoft/Windows/INetCache/IE/319GFT0R/book.json",
+		"/C/Users/eirik/AppData/Local/Microsoft/Windows/INetCache/IE/SZFQ0OEA/book.json",
+		"/C/Dev/Misc/booster-typescript-angularjs/LibraryApp/CSharp/package.json",
+		"/C/Dev/Misc/booster-typescript-angularjs/LibraryApp/CSharp/Source/.nuget/NuGet.targets",
+		"/C/Dev/Misc/booster-typescript-angularjs/LibraryApp/CSharp/Source/LibraryApp.sln",
+		"/C/Dev/Misc/booster-typescript-angularjs/LibraryApp/CSharp/readme.txt",
+		"/C/Dev/Misc/booster-typescript-angularjs/LibraryApp/CSharp/LibraryApp.sln",
+		"/C/Dev/Car.ts",
+		"/C/Users/eirik/AppData/Roaming/Sublime Text 3/Packages/User/typescript.sublime-build",
+		"/C/Dev/Demos/Testframeworks/nerdschool-testfx/main.css",
+		"/C/Dev/Demos/Testframeworks/nerdschool-testfx/main.js",
+		"/C/Dev/Demos/Testframeworks/nerdschool-testfx/testFramework.js",
+		"/C/Dev/Demos/Testframeworks/nerdschool-testfx/index.html",
+		"/C/Dev/Demos/Testframeworks/nerdschool-testfx/tests.html",
+		"/C/Users/eirik/Dropbox/nerdschool/EnKladdePlanForTirsdag.txt",
+		"/C/Users/eirik/Dropbox/nerdschool/assignment.txt",
+		"/C/Dev/Demos/Testframeworks/nerdschool-testfx/gameTests.js",
+		"/C/Dev/Thirdparty/jasmine/src/Player.js",
+		"/C/Dev/Thirdparty/jasmine/src/Song.js",
+		"/C/Dev/GitHubHosting/eaardal.github.io/nerdschool-ex4-impl/testFramework.js",
+		"/C/Dev/GitHubHosting/eaardal.github.io/nerdschool-ex4-impl/tests.html",
+		"/C/Users/eirik/Downloads/Transliste.csv",
+		"/D/Adobe Photoshop CS5.1 Extended Edition/INSTALLING INSTRUCTIONS.txt",
+		"/C/Dev/Projects/BeforeDawn/BeforeDawn.Core/Content/Levels/level1.txt",
+		"/C/Dev/Projects/BeforeDawn/BeforeDawn.Core/Content/Levels/level4.txt",
+		"/C/Users/eirik/Dropbox/bruce lee training.txt",
+		"/C/Users/eirik/Dropbox/security stuff.txt",
+		"/C/Users/eirik/Dropbox/studieting.txt",
+		"/C/Users/eirik/Desktop/animefilmer.txt",
+		"/C/Users/eirik/Desktop/Debug/Content/Levels/level4.txt",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Dev/GitHubHosting/sivhollup.github.io/index.html",
+		"/C/Dev/GitHubHosting/eaardal.github.io/nerdschool-ex4-impl/gameTests.js",
+		"/C/Dev/GitHubHosting/eaardal.github.io/nerdschool-ex4-impl/main.css",
+		"/C/Dev/GitHubHosting/eaardal.github.io/index.html",
+		"/C/Dev/GitHubHosting/eaardal.github.io/nerdschool-ex3-impl/index.html",
+		"/C/Dev/Nerdschool/nerdschool/3/assignment.txt",
+		"/C/Dev/GitHubHosting/eaardal.github.io/nerdschool-ex3-impl/main.css",
+		"/C/Dev/GitHubHosting/eaardal.github.io/nerdschool-ex3-impl/main.js",
+		"/C/Dev/GitHubHosting/eaardal.github.io/nerdschool-ex3-impl/utils.js",
+		"/C/Dev/Nerdschool/nerdschool/3/impl/index.html",
+		"/C/Dev/Nerdschool/nerdschool/3/impl/main.js",
+		"/C/Dev/Nerdschool/nerdschool/3/impl/main.css",
+		"/C/Dev/Nerdschool/nerdschool/1/commandLineTips.txt",
+		"/C/Dev/Nerdschool/nerdschool/1/exercises.txt",
+		"/C/Dev/Nerdschool/nerdschool/2/git.md",
+		"/C/Dev/Nerdschool/nerdschool/1/shellscripting.pptx",
+		"/D/Games/World of Warcraft/World of Warcraft/ActionHighlighter/actionHighlighter.toc",
+		"/C/Dev/Projects/Mundus/Vagrantfile",
+		"/C/Users/eirik/SkyDrive/Dev/Snippets/C# - GetRandomColor().txt",
+		"/C/Users/eirik/SkyDrive/Dev/Wiki/Eaardal-db Azure Database.txt",
+		"/C/Dev/Demos/OrleansPluralsight/OrleansDemo.GrainClasses/OrleansDemo.GrainClasses.csproj",
+		"/C/Programs/Tor Browser/Data/Tor/geoip6",
+		"/C/Programs/Tor Browser/urls.txt",
+		"/C/Programs/Tor Browser/apps.txt",
+		"/C/Users/eirik/Dropbox/Trening/mobility stretches.txt",
+		"/C/Dev/Projects/FeedMe/FeedMe/FeedMe.MvtImporter/ImportEngine.cs",
+		"/C/Program Files/OpenVPN/log/se.log",
+		"/C/Dev/Projects/Mundus/ReadMe.md",
+		"/C/Temp/OrleansDemo.GrainClasses.DeviceGrain-0000000000000000000000000000006503ffffffc62a9fe2.json",
+		"/C/Temp/OrleansDemo.GrainClasses.DeviceGrain-0000000000000000000000000000000003ffffffc62a9fe2.json",
+		"/C/Temp/OrleansDemo.GrainClasses.DeviceGrain-0000000000000000000000000000006803ffffffc62a9fe2.json",
+		"/C/Users/eirik/SkyDrive/Dev/Snippets/LINQ Extensions.txt",
+		"/C/Users/eirik/Dropbox/MainWindow.xaml.cs",
+		"/C/Dev/Demos/vagrantdemos/Vagrantfile",
+		"/C/Users/eirik/Dropbox/Skriverier/Bøker/Uten navn 1/Karakterer.txt",
+		"/C/Users/eirik/Dropbox/Skriverier/Bøker/Uten navn 1/Struktur.txt",
+		"/C/Users/eirik/SkyDrive/Dev/Ideas/Reddit World game name ideas.txt",
+		"/C/Dev/Projects/Mundus/RedditSetup/install-reddit.sh",
+		"/C/Program Files/OpenVPN/config/ca/auth.txt",
+		"/C/Program Files/OpenVPN/config/se.ovpn",
+		"/C/Users/eirik/SkyDrive/Dev/Wiki/OpenVPN automatisk oppstart og login.txt",
+		"/C/Users/eirik/Dropbox/New Text Document.txt",
+		"/D/VMs/Vagrant Base Boxes/Dev/box catalog metadata.json",
+		"/C/Dev/Projects/Mundus/ir.sh",
+		"/C/Dev/Demos/angularjsdemo/angular-route.js",
+		"/C/Dev/Demos/angularjsdemo/node_modules/express/benchmarks/run",
+		"/C/Dev/Demos/angularjsdemo/node_modules/express/node_modules/connect/node_modules/multiparty/node_modules/readable-stream/node_modules/debuglog/debuglog.js",
+		"/E/documents/The Great Hunt_ Book Two of 'The Wheel of Time'_B002VBV1R2.sdr/AuthorProfile.profile.B002VBV1R2.asc",
+		"/E/documents/The Great Hunt_ Book Two of 'The Wheel of Time'_B002VBV1R2.sdr/EndActions.data.B002VBV1R2.asc",
+		"/D/Within Temptation - Hydra (2014) FLAC/CD3/Within Temptation - Hydra (Instrumental Album).log",
+		"/D/New Document.txt",
+		"/C/Users/eirik/Dropbox/Skriverier/Bøker/Uten navn 1/Triologi struktur.txt",
+		"/C/Users/eirik/.ssh/odne_ftp_key_openssh",
+		"/C/Dev/Projects/SFTPReader/SFTPReader/Keys/odne_ftp_key_openssh",
+		"/C/Users/eirik/Dropbox/Kosthold/Koffein.txt",
+		"/C/Users/eirik/.ssh/odne_ftp_key_openssh_public",
+		"/D/Car PC Hacks.epub",
+		"/C/Dev/Projects/SFTPReader/SFTPReader/Keys/keyfile",
+		"/C/Users/eirik/SkyDrive/Dev/Ideas/SickBeard features.txt",
+		"/C/smallfile",
+		"/C/bigfile.txt",
+		"/C/Users/eirik/SkyDrive/New Text Document.txt",
+		"/C/Dev/Demos/GruntDemo/BowerDemo/package.json",
+		"/C/Dev/Wiki/Hvordan sette opp Bower.txt",
+		"/C/Dev/Demos/GruntDemo/BowerDemo/bower.json",
+		"/C/Dev/Wiki/Hvordan sette opp Grunt.txt",
+		"/C/Users/eirik/Desktop/SickBeard features",
+		"/C/Dev/Thirdparty/SickBeard/sickbeard/tv.py",
+		"/C/Dev/Demos/BigFileReader/TestFile.txt",
+		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.EventStore/SponsorPortal.EventStore.csproj",
+		"/C/Dev/Work/SponsorPortal/Gruntfile.js",
+		"/C/Users/eirik/Desktop/animefilmer",
+		"/C/Dev/Projects/LogWatcher/LogWatcher/bin/Debug/Testfile.txt",
+		"/C/Dev/Demos/GruntDemo/GruntDemo/Gruntfile.js",
+		"/C/Users/eirik/Dropbox/Trening/bench.txt",
+		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.TestHelpers/SponsorPortal.TestHelpers.csproj",
+		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.TestDataBuilders/SponsorPortal.TestDataBuilders.csproj",
+		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.Infrastructure/SponsorPortal.Infrastructure.csproj",
+		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.Helpers/SponsorPortal.Helpers.csproj",
+		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.ApplicationManagement.Web.Tests.Unit/SponsorPortal.ApplicationManagement.Web.Tests.Unit.csproj",
+		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.ApplicationManagement.Web/SponsorPortal.ApplicationManagement.Web.csproj",
+		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.ApplicationManagement.Core/SponsorPortal.ApplicationManagement.Core.csproj",
+		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.ApplicationForm.Tests.Unit/SponsorPortal.ApplicationManagement.Core.Tests.Unit.csproj",
+		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.ApplicationForm.Tests.Integration/SponsorPortal.ApplicationForm.Tests.Integration.csproj",
+		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.ApplicationEntry/SponsorPortal.ApplicationEntry.csproj",
+		"/C/Dev/Work/SponsorPortal/.gitignore",
+		"/C/Dev/Wiki/Hvordan sette opp Bower",
+		"/C/Dev/Demos/GruntDemo/BowerDemo/node_modules/bower/Gruntfile.js",
+		"/C/Dev/Templates/Grunt MSBuild - NUnit - NuGet/package.json",
+		"/C/Dev/Templates/Grunt MSBuild - NUnit - NuGet/Gruntfile.js",
+		"/C/Dev/Demos/GruntDemo/GruntDemo/package.json"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"getInstance",
+			"..\\..\\",
+			"\\..\\..\\",
+			"..\\..\\..\\",
+			"Seated Calf Press",
+			"Dip, ",
+			"dip, ",
+			"power",
+			"first_aired_iso\" : \"2014-06",
+			"number\" : 1,",
+			"pretty little",
+			"black",
+			"orange",
+			"provision"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"..\\",
+			"Dip - ",
+			"dip - "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/01-types.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4622,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4618,
+								4618
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/typescript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5586.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/01-types.js.map",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "gulpfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1248,
+								1248
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 253.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "typescript-cheatsheet.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 386.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 200.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,3 +1,3 @@
 ﻿/// <reference path="references.ts" />
-
-var app: ng.IModule = angular.module('libraryApp', ['ngRoute']);
+declare var angular : ng.IAngularStatic;
+var app: ng.IModule = angular.module('libraryApp', ['ngRoute', 'ngCookies']);

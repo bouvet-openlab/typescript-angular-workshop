@@ -10,6 +10,7 @@ module LibraryApp.Controllers {
 
         search();
         clear();
+        deleteBook(book:LibraryApp.Models.Book);
     }
 
     var searchBooksCtrl = ($scope: ISearchBooksCtrlScope, bookService: LibraryApp.Services.IBookService) => {
@@ -21,9 +22,9 @@ module LibraryApp.Controllers {
             $scope.anyBooks = $scope.books.length > 0;
         }
 
-        $scope.search = () => {
-        
-            bookService.searchTitlesAndAuthors($scope.searchQuery).then((response) => {
+        var setBooks = (promise: ng.IHttpPromise<LibraryApp.Models.Book[]>) => {
+
+            promise.then(response => {
 
                 $scope.books = response.data;
                 $scope.noResult = response.data.length === 0;
@@ -33,12 +34,22 @@ module LibraryApp.Controllers {
             }).finally(() => {
                 shouldShowTable();
             });
-                
+
+        }
+
+        $scope.search = () => {
+            var promise = bookService.searchTitlesAndAuthors($scope.searchQuery);
+            setBooks(promise);
         }
 
         $scope.clear = () => {
             $scope.books = [];
             shouldShowTable();
+        }
+
+        $scope.deleteBook = (book: LibraryApp.Models.Book) => {
+            var promise = bookService.deleteBook(book);
+            setBooks(promise);
         }
     }
 

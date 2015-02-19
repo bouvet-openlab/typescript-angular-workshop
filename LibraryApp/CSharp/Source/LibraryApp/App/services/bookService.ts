@@ -4,10 +4,11 @@ module LibraryApp.Services {
 
     export interface IBookService {
         getAllBooks(): ng.IHttpPromise<LibraryApp.Models.Book[]>;
-        searchTitlesAndAuthors(query:string): ng.IHttpPromise<LibraryApp.Models.Book[]>;
+        searchTitlesAndAuthors(query: string): ng.IHttpPromise<LibraryApp.Models.Book[]>;
+        deleteBook(book: LibraryApp.Models.Book);
     }
 
-    var bookService = ($http: ng.IHttpService, appSettings): IBookService => {
+    var bookService = ($http: ng.IHttpService, appSettings, $cookies): IBookService => {
 
         return {
             
@@ -22,6 +23,24 @@ module LibraryApp.Services {
                     : decodeURIComponent(query.toLowerCase());
 
                 return $http.get(appSettings.apiUrl + "book/search?query=" + query);
+            },
+
+            deleteBook: (book: LibraryApp.Models.Book) => {
+
+                $cookies.test = 'hei der';
+
+                var cookies = $cookies;
+                console.log(cookies);
+
+                return $http({
+                    method: 'DELETE',
+                    url: appSettings.apiUrl + "book",
+                    params: {
+                        id: book.id
+                    },
+                    xsrfHeaderName: 'libraryApp1',
+                    xsrfCookieName: 'libraryApp2'
+                });
             }
 
         }

@@ -1,0 +1,221 @@
+Ambient Declaration
+declare var angular
+var myApp = angular.module('myModule', []);
+
+DefinitelyTyped:
+https://github.com/borisyankov/DefinitelyTyped
+
+Any:
+This is the same:
+	var data: any;
+	var info;
+
+var doSomething: any = function(arg:any){
+	return arg;
+}
+
+When there is no type annotation, any is default.
+
+Number:
+var age: number = 2;
+var score: number = 98.25
+var rating = 98.25;
+
+Boolean
+var hasData: bool = true;
+var isReady = true;
+
+var name: string = 'John';
+var name = 'Jack';
+
+Arrays
+var names: string[] = ['John', 'Anne', 'Sarah'];
+var firstPerson: string;
+firstPerson = names[0];
+
+Null
+var age: number = null;
+var name: string = null;
+var isAwesome: bool = null;
+var person: {} = null;
+
+Object
+var square = { h: 10, w: 20 };
+var points: Object = { x: 10, y: 20 };
+
+Function
+var doSomething: Function;
+doSomething = function(x: number){
+	return x * x;
+}
+
+var square = function(rect: { h: number; w?: number; }) {
+	// parameter is a object that must have a "h" property and optionally can have a "w" property.
+	// ? = optional
+}
+
+Arrow Function (lambdas)
+var myFunc = function(h: number w: number){
+	return h * w;
+}
+
+var myFunc = (h: number, w: number) => h * w;
+
+Void:
+var greetMe: (msg: string) => void;
+greetMe = function(msg){
+	console.log(msg);
+}
+
+Interfaces:
+- interface for function
+- interface for class
+
+interface SquareFunction {
+	(x: number): number;
+}
+
+var square: SquareFunction = (num) => num * num;
+
+===
+
+interface Rectangle {
+	h: number;
+	w? number;
+}
+
+var square = (rect: Rectangle) => rect * rect;
+
+===
+
+interface Person {
+	firstName: string;
+	lastName: string;
+	age?: number;
+	phone: number;
+	email: string;	
+	getFullName: () => string;
+	sendEmail: (content: string) => void;
+	greet: (msg: string) => string;
+}
+
+var johnSmith: Person = {
+	firstName: 'John',
+	lastName: 'Smith',
+	age: 20,
+	phone: 11223344,
+	email: john@smith.com,
+	getFullName: function(){
+		reutrn this.firstName + " " + this.lastName;
+	},
+	sendEmail: function(content: string) => {
+		// send mail
+	},
+	greet: (msg: string) => "Greetings, " + this.getFullName();
+}
+
+Class
+- All fields in a class is public by default;
+
+class Car {
+	engine: string;
+
+	constructor(engine: string) {
+		this.engine = engine;
+	}
+}
+
+class Car {
+	constructor(public engine: string) {
+
+	}
+}
+
+class Car {
+	engine: string;
+
+	constructor(engine: string){
+		this.engine = engine;
+	}
+
+	start() {
+		return "Started " + this.engine;
+	}
+
+	stop() {
+		return "Stopped " + this.engine;
+	}
+}
+
+Properties
+
+class Car {
+	private engine: string;
+
+	constructor(engine: string){
+		this.engine = engine;
+	}
+
+	get engine(): string {
+		return this.engine;
+	}
+
+	set engine(value: string) {
+		if (value === undefined)
+			throw 'Engine is required!';
+
+		this.engine = value;
+	}
+}
+
+===
+
+class Engine {
+	constructor(public horsePower: number, public engineType: string){
+
+	}
+}
+
+class Car {
+	private engine: Engine;
+
+	constructor(engine: Engine) {
+		this.engine = engine;
+	}
+}
+
+var engine = new Engine(300, 'V8');
+var car = new Car(engine);
+
+===
+
+class Car {
+	private engine: Engine;
+
+	constructor(engine: Engine) {
+		this.engine = engine;
+	}
+
+	start() : void {
+		return 'Started';
+	}
+}
+
+Inheritance:
+class ChildClass extends ParentClass {
+	constructor(){
+		super();
+	}
+}
+
+Casting types:
+var ageString = '13';
+var age : number = <number>ageString;
+
+
+Type definition files:
+*.d.ts files
+lib.d.ts is built-in out of the box for DOM and JavaScript
+
+https://github.com/borisyankov/DefinitelyTyped for thirdparty definitions
+
