@@ -25,4 +25,4 @@ To run the solution-specific gulp target
 4. Do command: http-server src
 	This will start a http server in the src directory. The website should be running at http://localhost:8080
 
-4. Done!
+5. Done!
