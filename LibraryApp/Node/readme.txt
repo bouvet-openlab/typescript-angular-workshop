@@ -20,11 +20,9 @@ To run the solution-specific gulp target
 
 3. Do command: gulp
 	This will run the "default" gulp build target (which is the only one configured)
-	Expected output on success:
-		"Using gulpfile (...)\booster-typescript-angularjs\LibraryApp\CSharp\gulpfile.js"
-		"Starting 'default'..."
-		"Finished 'default' after <ms>"
+	By browsing \Source\LibraryApp\App\ and subfolders, there should now be a .js and .js.map file for each .ts file.
 
-		By browsing \Source\LibraryApp\App\ and subfolders, there should now be a .js and .js.map file for each .ts file.
+4. Do command: http-server src
+	This will start a http server in the src directory. The website should be running at http://localhost:8080
 
 4. Done!
