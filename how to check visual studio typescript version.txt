@@ -1,0 +1,2 @@
+- Start the "Developer Command Prompt for VS2013" from the start menu, (or located at C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\Shortcuts) 
+- Do command: "tsc -v"

@@ -12,14 +12,12 @@
                     <tr>
                         <th>Title</th>
                         <th>Author</th>
-                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="book in books">
                         <td>{{book.title}}</td>
                         <td>{{book.author}}</td>
-                        <td><button type="button" class="btn btn-danger btn-sm" ng-click="deleteBook(book)">Delete</button></td>
                     </tr>
                 </tbody>
             </table>

@@ -27,7 +27,6 @@ namespace LibraryApp.App_Start
                 .Include("~/Scripts/jquery-2.1.3.min.js")
                 .Include("~/Scripts/angular.min.js")
                 .Include("~/Scripts/angular-route.min.js")
-                .Include("~/Scripts/angular-cookies.min.js")
                 .Include("~/Scripts/bootstrap.min.js")
                 );
 

@@ -3,7 +3,7 @@
 module LibraryApp.Values {
 
     var appSettings = {
-        apiUrl: 'http://localhost:50468/library/'
+        apiUrl: 'http://openmockapi.azurewebsites.net/library/'
     }
 
     app.value('appSettings', appSettings);

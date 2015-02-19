@@ -108,7 +108,6 @@
     <Content Include="App\views\admin-index.html" />
     <Content Include="App\views\public-index.html" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\angular-cookies.min.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\bootstrap.min.js" />
