@@ -255,6 +255,7 @@ class Car3 {
 var myCar = new Car3();
 myCar.engine = 'V8'; // Use the setter
 log('myCar has its engine property set to: ' + myCar.engine);
+myCar.start();
 
 
 

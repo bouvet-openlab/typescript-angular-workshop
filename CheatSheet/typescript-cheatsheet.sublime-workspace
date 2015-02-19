@@ -92,26 +92,18 @@
 	"buffers":
 	[
 		{
-			"file": "src/01-types.ts",
-			"settings":
-			{
-				"buffer_size": 4622,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/01-types.js.map",
-			"settings":
-			{
-				"buffer_size": 4348,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "gulpfile.js",
 			"settings":
 			{
 				"buffer_size": 1248,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/typescript-cheatSheet.ts",
+			"settings":
+			{
+				"buffer_size": 5084,
 				"line_ending": "Windows"
 			}
 		}
@@ -119,9 +111,17 @@
 	"build_system": "Packages/User/Node.sublime-build",
 	"command_palette":
 	{
-		"height": 58.0,
+		"height": 104.0,
 		"selected_items":
 		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"typesc",
+				"Set Syntax: TypeScript"
+			],
 			[
 				"instal",
 				"Package Control: Install Package"
@@ -129,10 +129,6 @@
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"typesc",
-				"Set Syntax: TypeScript"
 			],
 			[
 				"j",
@@ -191,10 +187,6 @@
 				"Set Syntax: TypeScript"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"beau",
 				"Javascript Beautify"
 			],
@@ -225,11 +217,15 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Dev/Misc/booster-typescript-angularjs/CheatSheet",
-		"/C/Dev/Misc/booster-typescript-angularjs/CheatSheet/src"
+		"/C/Dev/Projects/booster-typescript-angularjs/CheatSheet",
+		"/C/Dev/Projects/booster-typescript-angularjs/CheatSheet/src"
 	],
 	"file_history":
 	[
+		"/C/Dev/Projects/booster-typescript-angularjs/CheatSheet/src/typescript-cheatSheet.js",
+		"/C/Dev/Projects/booster-typescript-angularjs/CheatSheet/src/angularjs-cheatSheet.js",
+		"/C/Dev/Projects/booster-typescript-angularjs/CheatSheet/src/01-types.js.map",
+		"/C/Dev/Projects/booster-typescript-angularjs/CheatSheet/src/01-types.ts",
 		"/C/Users/eirik/AppData/Roaming/Sublime Text 3/Packages/User/Node.sublime-build",
 		"/C/Dev/Misc/booster-typescript-angularjs/CheatSheet/package.json",
 		"/C/Dev/Misc/booster-typescript-angularjs/LibraryApp/CSharp/gulpfile.js",
@@ -353,15 +349,11 @@
 		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.ApplicationForm.Tests.Integration/SponsorPortal.ApplicationForm.Tests.Integration.csproj",
 		"/C/Dev/Work/SponsorPortal/Source/SponsorPortal.ApplicationEntry/SponsorPortal.ApplicationEntry.csproj",
 		"/C/Dev/Work/SponsorPortal/.gitignore",
-		"/C/Dev/Wiki/Hvordan sette opp Bower",
-		"/C/Dev/Demos/GruntDemo/BowerDemo/node_modules/bower/Gruntfile.js",
-		"/C/Dev/Templates/Grunt MSBuild - NUnit - NuGet/package.json",
-		"/C/Dev/Templates/Grunt MSBuild - NUnit - NuGet/Gruntfile.js",
-		"/C/Dev/Demos/GruntDemo/GruntDemo/package.json"
+		"/C/Dev/Wiki/Hvordan sette opp Bower"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -409,67 +401,11 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/01-types.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4622,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4618,
-								4618
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/User/typescript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 5586.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/01-types.js.map",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4348,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "gulpfile.js",
 					"semi_transient": false,
 					"settings":
@@ -481,8 +417,8 @@
 						"selection":
 						[
 							[
-								1248,
-								1248
+								610,
+								610
 							]
 						],
 						"settings":
@@ -495,7 +431,36 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/typescript-cheatSheet.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								173
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 230.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -503,7 +468,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -543,7 +508,7 @@
 	"project": "typescript-cheatsheet.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -578,7 +543,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 200.0,
+	"side_bar_width": 298.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
