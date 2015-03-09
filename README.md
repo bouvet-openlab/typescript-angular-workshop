@@ -67,3 +67,22 @@ It may be difficult to jump in and get started right away. To make it easier, th
 
 Please follow the mini-tutorial below.
 
+1. With `http-server` running (see top), navigate to [http://localhost:8080/#/public](http://localhost:8080/#/public) and click the `search` button. A list of books should be displayed with a column for *Title* and *Author*. Our goal is to add a third column with the location of the book in the library.
+
+2. By navigating to the [REST API documentation for retrieving All Books](http://openmockapi.azurewebsites.net/Help/Api/GET-library-book) and [invoking the endpoint](http://openmockapi.azurewebsites.net/library/book) which provides the `search` functionality with data, we see that each book has a `libraryLocation` object.
+
+```javascript
+{
+    "id": 1,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "nrInStock": 5,
+    "inStock": true,
+    "libraryLocation": {
+      "librarySection": "Fiction",
+      "shelfSection": "I-P",
+      "shelf": 3
+    }
+  }
+
+```
