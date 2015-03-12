@@ -2,44 +2,53 @@
 
 module LibraryApp.Controllers {
 
-    interface ISearchBooksCtrlScope extends ng.IScope {
+    interface ISearchBooksScope extends ng.IScope {
         books: LibraryApp.Models.Book[];
         anyBooks: boolean;
         noResult: boolean;
         searchQuery: string;
-
-        search();
-        clear();
+        events: SearchBooks;
+        search(): void;
+        clear(): void;
     }
 
-    var searchBooksCtrl = ($scope: ISearchBooksCtrlScope, bookService: LibraryApp.Services.IBookService) => {
-        $scope.books = [];
-        $scope.anyBooks = false;
-        $scope.searchQuery = undefined;
+    class SearchBooks {
+        public $scope: ISearchBooksScope;
+        private bookService: LibraryApp.Services.IBookService;
 
-        var shouldShowTable = () => {
-            $scope.anyBooks = $scope.books.length > 0;
+        static $inject = ['$scope', 'bookService']
+        constructor($scope: ISearchBooksScope, bookService: LibraryApp.Services.IBookService){
+            this.bookService = bookService;
+            this.$scope = $scope;
+            $scope.events = this;
+            $scope.books = [];
+            $scope.anyBooks = false;
+            $scope.searchQuery = undefined;
         }
 
-        $scope.search = () => {
-            bookService.searchTitlesAndAuthors($scope.searchQuery).then(response => {
+        private shouldShowTable() {
+            this.$scope.anyBooks = this.$scope.books.length > 0;
+        }
 
-                $scope.books = response.data;
-                $scope.noResult = response.data.length === 0;
+        public search() {
+            this.bookService.searchTitlesAndAuthors(this.$scope.searchQuery)
+                .then((books: LibraryApp.Models.Book[]): void => {
+
+                this.$scope.books = books;
+                this.$scope.noResult = books.length === 0;
 
             }).catch((error) => {
                 console.log(error);
             }).finally(() => {
-                shouldShowTable();
+                this.shouldShowTable();
             });
         }
 
-        $scope.clear = () => {
-            $scope.books = [];
-            shouldShowTable();
+        public clear() {
+            this.$scope.books = [];
+            this.shouldShowTable();
         }
     }
 
-    app.controller('searchBooksCtrl', searchBooksCtrl);
-
+    app.controller('searchBooksCtrl', SearchBooks);
 }

@@ -24,6 +24,11 @@
 
 // App/models
 
+/// <reference path="models/book.ts"/>
+/// <reference path="models/location.ts"/>
+
+// App/services
+
 /// <reference path="services/bookService.ts"/>
 
 // App/
