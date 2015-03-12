@@ -69,7 +69,7 @@ You don't need to implement anything on the server. Everything you need is avail
 
 ### Getting started
 
-It may be difficult to jump in and get started right away. To make this easier, there is a basic fill-in-the-blanks framework in place in the code to do feature #2 (search for where in the library the book is located).
+It may be difficult to jump in and get started right away. To make this easier, there is a basic fill-in-the-blanks framework in place in the code to do feature #2 (list a book's location in the library in the search results).
 
 Please follow the mini-tutorial below if you want some start help.
 
@@ -120,7 +120,7 @@ There are also some private helper methods that are used to parse incoming JSON 
 **6. Review and modify: book.ts** <br/>
 Let's inspect the `Book` model. Open `app\models\book.ts`. This is the model that is displayed on the screen that we need to add the location to. In its current state it has 3 private fields and 3 properties with a getter and setter each.
 
-Add the location property and private field (you should type it in manually):
+Add the location property and private field (you should type it in manually, for the practice):
 
 ```javascript
 private _location: Location;
@@ -190,6 +190,6 @@ Let's review how this will work and the changes we've done.
 
 Go to [http://localhost:8080/#/public](http://localhost:8080/#/public), hit the Search button and verify that there is a new Location column with a description for each book.
 
-**Note** that since our changes didn't require us to create new files, we didn't need to add any `<script>` imports to the `app\index.html`. This will be required when you work on other features and add new files.
+**Note** that since our changes didn't require us to create new files, we didn't need to add any `<script>` imports to the `app\index.html`. This will be required when you work on other features and add new files (although the TypeScript compiler also has the `--out` parameter which concatenates all `.ts` files into a single `.js` file. You can play with this setting in the `gulpfile.js`, but know that there are some ordering issues with Angular (app.ts needs to be the first compiled file, which it currently is not)). 
 
 [See the Wiki for more details regarding the other features](https://github.com/bouvet-openlab/typescript-angular-workshop/wiki)
