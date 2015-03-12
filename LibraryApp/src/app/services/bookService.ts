@@ -8,6 +8,8 @@ module LibraryApp.Services {
     }
 
     class BookService implements IBookService {
+
+        static $inject = ['$http', 'appSettings'];
         constructor(private $http: ng.IHttpService, private appSettings) { }
 
         public getAllBooks() {
@@ -52,10 +54,5 @@ module LibraryApp.Services {
         }
     }   
 
-    factory.$inject = ['$http', 'appSettings'];
-    function factory($http: ng.IHttpService, appSettings) : IBookService {
-        return new BookService($http, appSettings);
-    }
-
-    app.factory('bookService', factory);
+    app.service('bookService', BookService);
 }

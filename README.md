@@ -57,7 +57,7 @@ You don't need to implement anything on the server. Everything you need is avail
 ### Features to implement
 
 1. Implemented as reference: Anyone can search for books by entering the book title or author. An empty search returns all books.
-2. Anyone can search for where in the library a book is located by the book's ID or name.
+2. Library Location should be listed in the Search results
 3. Admin can see a list of overdue rentals.
 4. Admin can check out a book for a customer by entering the book's ID and the customer's information.
 5. Admin can check in a book for a customer by entering the book's ID.
@@ -65,7 +65,7 @@ You don't need to implement anything on the server. Everything you need is avail
 7. Admin can delete a book from the library by searching for it in the admin part of the website and pressing a delete button next to the book he wants to delete.
 8. Admin can update properties (name, author, library location, library category, etc) on a existing book.
 
-**Getting started**
+### Getting started
 
 It may be difficult to jump in and get started right away. To make this easier, there is a basic fill-in-the-blanks framework in place in the code to do feature #2 (search for where in the library the book is located).
 
@@ -75,11 +75,11 @@ Please follow the mini-tutorial below if you want some start help.
 With `http-server` running (see top), navigate to [http://localhost:8080/#/public](http://localhost:8080/#/public) and click the `search` button. A list of books should be displayed with a column for *Title* and *Author*. Our goal is to add a third column with the *Location* of the book in the library.
 
 **2. Inspect server API endpoints** <br/>
-By navigating to the [REST API documentation for retrieving All Books](http://openmockapi.azurewebsites.net/Help/Api/GET-library-book) and [invoking the endpoint](http://openmockapi.azurewebsites.net/library/book) which provides the `search` functionality with data, we see that each book has a `libraryLocation` object.
+By navigating to the [REST API documentation for retrieving All Books](http://openmockapi.azurewebsites.net/Help/Api/GET-library-book) and [invoking the endpoint](http://openmockapi.azurewebsites.net/library/book) which provides the `search` functionality with data, we see that each book has a `libraryLocation` object which has the information we require.
+
+A Book object as returned by the server:
 
 ```javascript
-A Book object as returned by the server
-
 {
     "id": 1,
     "title": "To Kill a Mockingbird",
@@ -92,32 +92,38 @@ A Book object as returned by the server
       "shelf": 3
     }
   }
-
 ```
 
 **3. Open app in IDE** <br/>
 Open the `LibraryApp` folder in your IDE. If your IDE lists `.js` and `.js.map` files, ignore these. We will only work with `.ts` files. 
 
 **4. Locate the files to change** <br/>
-The search functionality is an Angular directive, located in `\src\app\directives\searchBooks*.*`. It gets its data from the `bookService` service, located in `src\app\services\bookService.ts`. Open this file.
+The search functionality is an Angular directive, located in `app\directives\searchBooks*.*`. It gets its data from the `bookService` service, located in `app\services\bookService.ts`. Open this file.
 
 **5. Review the existing code: bookService.ts** <br/>
 The file holds the interface `IBookService` which defines the service, and the service itself: the `BookService` class. 
 
-The service requires two services to be injected in by Angular: `$http` and `appSettings`. It has two public methods, `getAllBooks` and `searchTitlesAndAuthors`. Note in the interface that both functions returns the type `ng.IHttpPromise<LibraryApp.Models.Book[]>`, in plain english: a promise that when resolved, returns an array of books.
+The service requires two services to be injected in by Angular: `$http` and `appSettings`.
+```javascript
+static $inject = ['$http', 'appSettings'];
+constructor(private $http: ng.IHttpService, private appSettings) { }
+```
 
-There are also some private helper methods that are used to parse incoming JSON data to the app-specific model objects. A side note: Strictly speaking, this is not necessary to make this work. You can just return the promise directly without the manual property mapping to the `Book` model, but then the datatype will be `any` and thus untyped. If you commit to TypeScript, it is my opinion that you will get a better solution by strictly applying types where possible.
+These dependencies will be injected into the constructor. Note that the constructor parameters are defined as `private` which means TypeScript will automatically create the private `this.$http` and `this.appSettings` members for us. 
+
+The service has two public methods: `getAllBooks` and `searchTitlesAndAuthors`. Note in the interface that both functions returns the type `ng.IPromise<LibraryApp.Models.Book[]>`, in plain english: a promise that when resolved, returns an array of books.
+
+There are also some private helper methods that are used to parse incoming JSON data to the app-specific model objects. A side note: Strictly speaking, this is not necessary to make this work. You can just return the promise directly without the manual property mapping to the `Book` model, but then the datatype will then be `any` which is not desired. If you commit to TypeScript, it is my opinion that you will get a better solution by strictly applying types where possible.
 
 **6. Review the existing code: book.ts** <br/>
-Let's inspect the `Book` model. Open `app\models\book.ts`. This is the model that is displayed on the screen that we need to add the location to. In fact, there is already a `location` property of type `Location` but it's not completed.
+Let's inspect the `Book` model. Open `app\models\book.ts`. This is the model that is displayed on the screen that we need to add the location to. In fact, there is already a `location` property of type `Location` present but it's not completed.
 
 **7. Complete location.ts** <br/>
 Open `app\models\location.ts`. It has the property `librarySection` already in place, but are missing `shelfSection` and `shelf` (see JSON structure in `#2` above).
 
+Add this code below the `librarySection` property in location.ts:
+
 ```javascript
-
-Add this code below the librarySection property in location.ts:
-
 public shelfSection: string;
 public shelf: number;
 
@@ -129,10 +135,9 @@ get description(): string {
 This adds the missing fields and adds the new `description` property which only has a getter that returns a formatted string that we will display to the user. 
 
 **8. Modify bookService.ts** <br/>
-Now that our model is updated, we need to map the new properties. This takes place in the private `parseBook` method in bookService.ts. Open this file and above the return statement, add the following code:        
+Now that our model is updated, we need to map the new properties. This takes place in the private `parseBook` method in `bookService.ts`. Open this file, and in `parseBook` above the return statement add the following code:        
 
 ```javascript
-
 book.location = new LibraryApp.Models.Location();
 book.location.librarySection = item.libraryLocation.librarySection;
 book.location.shelfSection = item.libraryLocation.shelfSection;
@@ -148,7 +153,9 @@ Let's review how this will work and the changes we've done.
 - When someone hits the `Search` button, it triggers the `ng-click="events.search()"` click handler in `searchBooks.html`, which triggers the `search` method in `searchBooksCtrl.ts`. 
 - The search query is passed into the  `bookService.ts`'s `searchTitlesAndAuthors` method which in turn sends it to the server. The `search` method is returned an asynchronous promise that will be resolved some time in the future.
 - When a response from the server is received, the `.then` callback function (in `searchTitlesAndAuthors`) is triggered and we take the JSON returned from the server and parses it to our app's Book model which is then returned to the caller.
-- Now the `.then` in `searchBooksCtrl.ts`'s `search` method is resolved and we put the array of books returned from the service on our `$scope`.
+- Now the `.then` in `searchBooksCtrl.ts`'s `search` method is resolved and we put the array of books returned from the service on our `$scope` (the "view model").
 - Angular then detects that our `$scope.books` has changed (it was set to an empty array in the controller's constructor), and updates the GUI automatically.
 
 Go to [http://localhost:8080/#/public](http://localhost:8080/#/public), hit the Search button and verify that there is a new Location column with a description for each book.
+
+**Note** that since our changes didn't require us to create new files, we didn't need to add any `<script>` imports to the `app\index.html`. This will be required when you work on other features and add new files.
