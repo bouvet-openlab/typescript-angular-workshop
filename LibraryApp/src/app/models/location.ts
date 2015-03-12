@@ -2,13 +2,16 @@ module LibraryApp.Models {
 
     export class Location {
         
-    	public librarySection: string;
-    	public shelfSection: string;
-    	public shelf: number;
+    	private _librarySection: string; 
 
-    	get description(): string {
-    		return "In " + this.librarySection + " " + this.shelfSection + " at shelf " + this.shelf;
-    	}
+        get librarySection(): string {
+			return this._librarySection;
+		}
+
+		set librarySection(value: string) {
+			this._librarySection = value
+		}
+		
     }
 
 }

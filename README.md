@@ -117,27 +117,57 @@ The service has two public methods: `getAllBooks` and `searchTitlesAndAuthors`. 
 
 There are also some private helper methods that are used to parse incoming JSON data to the app-specific model objects. A side note: Strictly speaking, this is not necessary to make this work. You can just return the promise directly without the manual property mapping to the `Book` model, but then the datatype will then be `any` which is not desired. If you commit to TypeScript, it is my opinion that you will get a better solution by strictly applying types where possible.
 
-**6. Review the existing code: book.ts** <br/>
-Let's inspect the `Book` model. Open `app\models\book.ts`. This is the model that is displayed on the screen that we need to add the location to. In fact, there is already a `location` property of type `Location` present but it's not completed.
+**6. Review and modify: book.ts** <br/>
+Let's inspect the `Book` model. Open `app\models\book.ts`. This is the model that is displayed on the screen that we need to add the location to. In its current state it has 3 private fields and 3 properties with a getter and setter each.
+
+Add the location property and private field (you should type it in manually):
+
+```javascript
+private _location: Location;
+
+get location(): Location {
+	return this._location;
+}
+
+set location(value: Location) {
+	this._location = value;
+}
+```
 
 **7. Complete location.ts** <br/>
 Open `app\models\location.ts`. It has the property `librarySection` already in place, but are missing `shelfSection` and `shelf` (see JSON structure in `#2` above).
 
-Add this code below the `librarySection` property in location.ts:
+Add this code below the `librarySection` property in `location.ts` (again, you should type it manually):
 
 ```javascript
-public shelfSection: string;
-public shelf: number;
+private _shelfSection: string;
+private _shelf: string;
+
+get shelfSection(): string {
+  return this._shelfSection;
+}
+
+set shelfSection(value: string) {
+  this._shelfSection = value;
+}
+
+get shelf(): string {
+  return this._shelf;
+}
+
+set shelf(value: string) {
+  this._shelf = value;
+}
 
 get description(): string {
-	return "In " + this.librarySection + " " + this.shelfSection + " at shelf " + this.shelf;
+  return "In " + this._librarySection + " " + this._shelfSection + " at shelf " + this._shelf;
 }
 ```
 
 This adds the missing fields and adds the new `description` property which only has a getter that returns a formatted string that we will display to the user. 
 
 **8. Modify bookService.ts** <br/>
-Now that our model is updated, we need to map the new properties. This takes place in the private `parseBook` method in `bookService.ts`. Open this file, and in `parseBook` above the return statement add the following code:        
+Now that our model is updated, we need to map the new properties. This takes place in the private `parseBook` method in `bookService.ts`. Open this file, and in `parseBook` above the return statement type in the following code:        
 
 ```javascript
 book.location = new LibraryApp.Models.Location();

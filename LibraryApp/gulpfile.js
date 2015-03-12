@@ -10,10 +10,11 @@ var compileTypeScript = function(){
     // The options object take properties equivalent to the commands you see when typing "tsc" or "tsc --help" in the console
     
     var compilation = tsb.create({
-        target: 'es5', 			// Equivalent to the command "tsc --target <version>"
-        module: 'commonjs',		// Equivalent to the command "tsc --module <kind>"
-        declaration: false,		// Equivalent to the command "tsc --declaration"
-        sourceMap: true			// Equivalent to the command "tsc --sourceMap"
+        target: 'es5', 					// Equivalent to the command "tsc --target <version>"
+        module: 'commonjs',				// Equivalent to the command "tsc --module <kind>"
+        declaration: false,				// Equivalent to the command "tsc --declaration"
+        sourceMap: true				// Equivalent to the command "tsc --sourceMap"
+		//out: 'src/app/compiled-app.js'	// Equivalent to the command "tsc --out <concatenated .js>. Concatenates all .ts files into one .js"
     });
 
 	return gulp.src('src/**/*.ts')

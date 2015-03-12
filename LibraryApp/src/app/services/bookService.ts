@@ -36,10 +36,6 @@ module LibraryApp.Services {
             book.id = item.id;
             book.title = item.title;
             book.author = item.author;
-            book.location = new LibraryApp.Models.Location();
-            book.location.librarySection = item.libraryLocation.librarySection;
-            book.location.shelfSection = item.libraryLocation.shelfSection;
-            book.location.shelf = item.libraryLocation.shelf;
             return book;
         }
 
