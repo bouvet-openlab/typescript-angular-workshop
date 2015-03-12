@@ -13,21 +13,17 @@ module LibraryApp.Controllers {
     }
 
     class SearchBooks {
-        public $scope: ISearchBooksScope;
         private bookService: LibraryApp.Services.IBookService;
+        private $scope: ISearchBooksScope;        
 
         static $inject = ['$scope', 'bookService']
         constructor($scope: ISearchBooksScope, bookService: LibraryApp.Services.IBookService){
             this.bookService = bookService;
             this.$scope = $scope;
-            $scope.events = this;
-            $scope.books = [];
-            $scope.anyBooks = false;
-            $scope.searchQuery = undefined;
-        }
-
-        private shouldShowTable() {
-            this.$scope.anyBooks = this.$scope.books.length > 0;
+            this.$scope.events = this;
+            this.$scope.books = [];
+            this.$scope.anyBooks = false;
+            this.$scope.searchQuery = undefined;
         }
 
         public search() {
@@ -47,6 +43,10 @@ module LibraryApp.Controllers {
         public clear() {
             this.$scope.books = [];
             this.shouldShowTable();
+        }
+
+        private shouldShowTable() {
+            this.$scope.anyBooks = this.$scope.books.length > 0;
         }
     }
 

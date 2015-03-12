@@ -1,0 +1,31 @@
+<div>
+    <div class="col-lg-12">
+        <div ng-if="anyBooks">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Rented</th>
+                        <th>Expected Back</th>
+                        <th>Rented By</th>
+                        <th>Contact Info</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="overdue in overdueBooks">
+                        <td>{{overdue.book.title}}</td>
+                        <td>{{overdue.book.author}}</td>
+                        <td>{{overdue.rentedText}}</td>
+                        <td>{{overdue.expectedBackText}}</td>
+                        <td>{{overdue.customer.firstname}} {{book.customer.lastname}}</td>
+                        <td>{{overdue.customer.email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div ng-if="!anyBooks && noResult">
+            <h4>No overdue books in the system</h4>
+        </div>
+    </div>
+</div>
