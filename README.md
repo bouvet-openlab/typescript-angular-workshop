@@ -115,7 +115,7 @@ These dependencies will be injected into the constructor. Note that the construc
 
 The service has two public methods: `getAllBooks` and `searchTitlesAndAuthors`. Note in the interface that both functions returns the type `ng.IPromise<LibraryApp.Models.Book[]>`, in plain english: a promise that when resolved, returns an array of books.
 
-There are also some private helper methods that are used to parse incoming JSON data to the app-specific model objects. A side note: Strictly speaking, this is not necessary to make this work. You can just return the promise directly without the manual property mapping to the `Book` model, but then the datatype will then be `any` which is not desired. If you commit to TypeScript, it is my opinion that you will get a better solution by strictly applying types where possible.
+There are also some private helper methods that are used to parse incoming JSON data to the app-specific model objects. A side note: Strictly speaking, this is not necessary to make this work. You can just return the promise directly without the manual property mapping to the `Book` model, but then the type will be `any` which is not desired. If you commit to TypeScript, it is my opinion that you will get a better solution by strictly applying types where possible and adhere to the rules and infrastructure TypeScript provides.
 
 **6. Review and modify: book.ts** <br/>
 Let's inspect the `Book` model. Open `app\models\book.ts`. This is the model that is displayed on the screen that we need to add the location to. In its current state it has 3 private fields and 3 properties with a getter and setter each.
