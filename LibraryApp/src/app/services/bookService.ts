@@ -36,8 +36,12 @@ module LibraryApp.Services {
                 book.id = item.id;
                 book.title = item.title;
                 book.author = item.author;
+                book.location = new LibraryApp.Models.Location();
+                book.location.librarySection = item.libraryLocation.librarySection;
+                book.location.shelfSection = item.libraryLocation.shelfSection;
+                book.location.shelf = item.libraryLocation.shelf;
                 books.push(book);
-                });
+            });
             return books;
         }
     }   
@@ -48,31 +52,4 @@ module LibraryApp.Services {
     }
 
     app.factory('bookService', factory);
-/*
-    var bookService = ($http: ng.IHttpService, appSettings): IBookService => {
-
-        return {
-            
-            getAllBooks: () => {
-                return $http.get(appSettings.apiUrl + "book")
-                        .then((response: ng.IHttpPromiseCallbackArg<LibraryApp.Models.Book[]>): LibraryApp.Models.Book[] => {
-                            return response.data;
-                    });
-            },
-
-            searchTitlesAndAuthors: (query: string) => {
-
-                query = (query === undefined || query === null)
-                    ? ''
-                    : encodeURIComponent(query.toLowerCase());
-
-                return $http.get(appSettings.apiUrl + "book/search?query=" + query);
-            }
-
-        }
-
-    };
-
-    app.factory('bookService', bookService);
-*/
 }
