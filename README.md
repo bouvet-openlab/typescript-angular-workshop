@@ -2,7 +2,7 @@
 
 ### Get repository
 
-- Clone this repo `git clone https://github.com/bouvet-openlab/typescript-angular-workshop.git` or download as .zip `https://github.com/bouvet-openlab/typescript-angular-workshop/archive/master.zip` 
+- Clone this repo: `git clone https://github.com/bouvet-openlab/typescript-angular-workshop.git` or [download as .zip](https://github.com/bouvet-openlab/typescript-angular-workshop/archive/master.zip). 
 
 ### Start website and compile TypeScript files
 
@@ -22,7 +22,7 @@
 
 #### To run the gulp targets
 
-1. In a terminal, go to <root-of-repository>\LibraryApp (e.x.: c:\dev\typescript-angular-workshop\LibraryApp)
+1. In a terminal, go to `<root-of-repository>\LibraryApp` (e.x.: `c:\dev\typescript-angular-workshop\LibraryApp`)
 
 2. Do command: `npm install`. This will read the dependencies in `package.json` and download them.
 
@@ -64,6 +64,8 @@ You don't need to implement anything on the server. Everything you need is avail
 6. Admin can enter a new book into the library by entering the book's basic information.
 7. Admin can delete a book from the library by searching for it in the admin part of the website and pressing a delete button next to the book he wants to delete.
 8. Admin can update properties (name, author, library location, library category, etc) on a existing book.
+
+[The Wiki](https://github.com/bouvet-openlab/typescript-angular-workshop/wiki) has more details about how to implement the features if stuck
 
 ### Getting started
 
@@ -159,3 +161,5 @@ Let's review how this will work and the changes we've done.
 Go to [http://localhost:8080/#/public](http://localhost:8080/#/public), hit the Search button and verify that there is a new Location column with a description for each book.
 
 **Note** that since our changes didn't require us to create new files, we didn't need to add any `<script>` imports to the `app\index.html`. This will be required when you work on other features and add new files.
+
+[See the Wiki for more details regarding the other features](https://github.com/bouvet-openlab/typescript-angular-workshop/wiki)
