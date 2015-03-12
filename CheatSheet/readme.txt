@@ -1,30 +1,22 @@
-To compile TypeScript with gulp
-================================================
+If you want to do changes in the cheat sheet and inspect the compiled javascript, you can either compile
+manually in a commandline or run the default `gulp` target or `gulp watch` that will listen for file changes.
 
+# Requirements
 
-Requirements
-------------------------------------------------
-- Requires that node (npm) is installed on the computer. You can test this by typing "npm" into a commandline. 
-	Install nodejs at http://nodejs.org/ or through a package manager.
+- Requires that `NodeJS` is installed on the computer. 
 
-- Requires that gulp is installed globally on the computer. You can test this by typing gulp int a commandline.
-	Install gulp by doing command: npm install --global gulp
+	Install nodejs at [http://nodejs.org/](http://nodejs.org/)
 
+- Requires that `gulp` is installed globally on the computer.
 
-To run the solution-specific gulp target
-------------------------------------------------
-1. Open command line at same directory where this readme file is located.
+	Install `gulp` by doing command: `npm install --global gulp`
 
-2. Do command: npm install
-	This will read the dependencies in package.json and download them.
+# To run the gulp targets
 
-3. Do command: gulp
-	This will run the "default" gulp build target (which is the only one configured)
-	Expected output on success:
-		"Using gulpfile (...)\booster-typescript-angularjs\LibraryApp\CSharp\gulpfile.js"
-		"Starting 'default'..."
-		"Finished 'default' after <ms>"
+1. In a terminal, go to `<root-of-repository>\CheatSheet` (e.x.: `c:\dev\typescript-angular-workshop\CheatSheet`)
 
-		By browsing \Source\LibraryApp\App\ and subfolders, there should now be a .js and .js.map file for each .ts file.
+2. Do command: `npm install`. This will read the dependencies in `package.json` and download them.
 
-4. Done!
+3. Do command: `gulp watch`. Gulp will now *watch for typescript file changes in all sub directories* and compile to javascript automatically.
+
+4. Play around with the cheat sheet

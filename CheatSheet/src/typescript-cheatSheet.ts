@@ -115,8 +115,7 @@ var something: (msg: string) => string = function(msg: string) {
 
 
 // Interfaces
-//	- Can be applied to functions
-//	- Can be applied to classes
+//	- Can be applied to functions, classes or objects
 
 interface SquareFunction {
 	// Defines a function that takes a number parameter and returns a number:
@@ -195,7 +194,7 @@ interface moreStuff extends stuff {
 
 
 // Classes
-// - All fields in a class is public by default 
+// - All fields in a class are public by default.
 
 class Car {
 	engine: string; // public
@@ -227,8 +226,8 @@ class Car3 {
 	// getters and setters on the prototype object behind the scenes.
 	// Note: This only works on ES5 and above and the newest browsers.
 	// Note 2: the underscore naming convention (_engine) is just 
-	// a common naming pattern for something that is private that is no 
-	// TypeScript syntax.
+	// a common naming pattern for something that is private.
+	// It's not TypeScript syntax.
 
 	private _engine: string;
 
@@ -254,7 +253,7 @@ class Car3 {
 
 var myCar = new Car3();
 myCar.engine = 'V8'; // Use the setter
-log('myCar has its engine property set to: ' + myCar.engine);
+log('myCar has its engine property set to: ' + myCar.engine); // Use the getter
 myCar.start();
 
 
@@ -319,6 +318,42 @@ function doStuff<T extends IFancy>(input: T) : T {
 
 
 
+// Generic interface
+
+interface GenericInterface {
+    <T>(arg: T): T; // A function that takes a param of generic type T and returns T
+}
+
+function SomeFunc<T>(arg: T): T {
+    return arg;
+}
+
+var superCool: GenericInterface = SomeFunc; // The superCool function implements the interface and is equal to a function that matches the interface
+
+
+
+
+
+// Generic constraints
+
+interface Pepperoni { }
+
+interface Pizza<T extends Pepperoni> { // T must implement Pepperoni
+	MakePizza<T>(ingredients: string[]): void;
+}
+
+class YumYum implements Pepperoni { 
+	constructor() { }
+}
+
+class PizzaMaker implements Pizza<YumYum> {
+	MakePizza<YumYum>(ingredients: string[]) {
+
+	}
+}
+
+
+
 
 
 
@@ -355,7 +390,8 @@ module MyApp {
 	}
 }
 
-var newInstance = new MyApp.MyClass();
+
+
 
 
 
