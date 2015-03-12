@@ -71,10 +71,10 @@ It may be difficult to jump in and get started right away. To make this easier, 
 
 Please follow the mini-tutorial below if you want some start help.
 
-<p style="font-weight: bold">1. Verify local app is running</p>
+**1. Verify local app is running** <br/>
 With `http-server` running (see top), navigate to [http://localhost:8080/#/public](http://localhost:8080/#/public) and click the `search` button. A list of books should be displayed with a column for *Title* and *Author*. Our goal is to add a third column with the *Location* of the book in the library.
 
-<p style="font-weight: bold">2. Inspect server API endpoints</p>
+**2. Inspect server API endpoints** <br/>
 By navigating to the [REST API documentation for retrieving All Books](http://openmockapi.azurewebsites.net/Help/Api/GET-library-book) and [invoking the endpoint](http://openmockapi.azurewebsites.net/library/book) which provides the `search` functionality with data, we see that each book has a `libraryLocation` object.
 
 ```javascript
@@ -94,23 +94,24 @@ A Book object as returned by the server
   }
 
 ```
-<p style="font-weight: bold">3. Open app in IDE</p>
+
+**3. Open app in IDE** <br/>
 Open the `LibraryApp` folder in your IDE. If your IDE lists `.js` and `.js.map` files, ignore these. We will only work with `.ts` files. 
 
-<p style="font-weight: bold">4. Locate the files to change</p>
+**4. Locate the files to change** <br/>
 The search functionality is an Angular directive, located in `\src\app\directives\searchBooks*.*`. It gets its data from the `bookService` service, located in `src\app\services\bookService.ts`. Open this file.
 
-<p style="font-weight: bold">5. Review the existing code: bookService.ts</p>
+**5. Review the existing code: bookService.ts** <br/>
 The file holds the interface `IBookService` which defines the service, and the service itself: the `BookService` class. 
 
 The service requires two services to be injected in by Angular: `$http` and `appSettings`. It has two public methods, `getAllBooks` and `searchTitlesAndAuthors`. Note in the interface that both functions returns the type `ng.IHttpPromise<LibraryApp.Models.Book[]>`, in plain english: a promise that when resolved, returns an array of books.
 
 There are also some private helper methods that are used to parse incoming JSON data to the app-specific model objects. A side note: Strictly speaking, this is not necessary to make this work. You can just return the promise directly without the manual property mapping to the `Book` model, but then the datatype will be `any` and thus untyped. If you commit to TypeScript, it is my opinion that you will get a better solution by strictly applying types where possible.
 
-<p style="font-weight: bold">6. Review the existing code: book.ts</p>
+**6. Review the existing code: book.ts** <br/>
 Let's inspect the `Book` model. Open `app\models\book.ts`. This is the model that is displayed on the screen that we need to add the location to. In fact, there is already a `location` property of type `Location` but it's not completed.
 
-<p style="font-weight: bold">7. Complete location.ts</p>
+**7. Complete location.ts** <br/>
 Open `app\models\location.ts`. It has the property `librarySection` already in place, but are missing `shelfSection` and `shelf` (see JSON structure in `#2` above).
 
 ```javascript
@@ -127,7 +128,7 @@ get description(): string {
 
 This adds the missing fields and adds the new `description` property which only has a getter that returns a formatted string that we will display to the user. 
 
-<p style="font-weight: bold">8. Modify bookService.ts</p>
+**8. Modify bookService.ts** <br/>
 Now that our model is updated, we need to map the new properties. This takes place in the private `parseBook` method in bookService.ts. Open this file and above the return statement, add the following code:        
 
 ```javascript
@@ -138,10 +139,10 @@ book.location.shelfSection = item.libraryLocation.shelfSection;
 book.location.shelf = item.libraryLocation.shelf;
 ```
 
-<p style="font-weight: bold">8. Modify searchBooks.html</p>
+**8. Modify searchBooks.html** <br/>
 The last piece of the puzzle is to create a new Location column to the table that lists the book in the GUI. Open `app\directives\searchBooks.html` and add a new Location column header `<th>Location</th>` and a new column which prints the location description `<td>{{book.location.description}}</td>`.
 
-<p style="font-weight: bold">9. Review and run</p>
+**9. Review and run** <br/>
 Let's review how this will work and the changes we've done. 
 
 - When someone hits the `Search` button, it triggers the `ng-click="events.search()"` click handler in `searchBooks.html`, which triggers the `search` method in `searchBooksCtrl.ts`. 
